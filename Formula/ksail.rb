@@ -2,8 +2,6 @@ class Ksail < Formula
   desc "Cli tool for provisioning gitops enabled k8s clusters in docker"
   homepage "https://github.com/devantler/ksail"
   version "1.0.11"
-  bottle :unneeded
-
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/devantler/ksail/archive/refs/tags/v1.0.11.tar.gz"
