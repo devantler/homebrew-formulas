@@ -5,13 +5,29 @@
 class Ksail < Formula
   desc "Cli tool for provisioning gitops enabled k8s clusters in docker"
   homepage "https://github.com/devantler/ksail"
-  url "https://github.com/devantler/ksail/archive/refs/tags/v1.0.8.tar.gz"
-  sha256 "e4f30bfebe88bfa118928c4e7ab1e2219f3ade47c42b7c7131a0856da534a0e6"
+  version "1.0.8"
+  bottle :unneeded
 
-  on_macos do
-  end
-
-  on_linux do
+  if OS.mac?
+    if Hardware::CPU.arm?
+      url "https://github.com/devantler/ksail/releases/download/v#{version}/ksail-osx-arm64.tar.gz"
+      sha256 "replace_with_osx_arm64_sha256"
+    elseif Hardware::CPU.intel?
+      url "https://github.com/devantler/ksail/releases/download/v#{version}/ksail-osx-x64.tar.gz"
+      sha256 "replace_with_osx_x64_sha256"
+    else
+      raise "Unable to determine binary to download for macOS on unknown CPU architecture"
+    end
+  elsif OS.linux?
+    if Hardware::CPU.arm?
+      url "https://github.com/devantler/ksail/releases/download/v#{version}/ksail-linux-arm64.tar.gz"
+      sha256 "replace_with_linux_arm64_sha256"
+    elsif Hardware::CPU.intel?
+      url "https://github.com/devantler/ksail/releases/download/v#{version}/ksail-linux-x64.tar.gz"
+      sha256 "replace_with_linux_x64_sha256"
+    else
+      raise "Unable to determine binary to download for Linux on unknown CPU architecture"
+    end
   end
 
   def install

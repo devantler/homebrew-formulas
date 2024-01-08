@@ -1,8 +1,8 @@
 # Devantler Formulas
 
-# <!-- project_table_start -->
-# TABLE HERE
-# <!-- project_table_end -->
+| Formula | Description |
+| ------- | ----------- |
+| KSail   | A CLI tool for provisioning GitOps enabled K8s clusters in Docker. |
 
 ## How do I install these formulae?
 
