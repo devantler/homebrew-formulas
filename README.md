@@ -1,5 +1,9 @@
 # Devantler Formulas
 
+# <!-- project_table_start -->
+# TABLE HERE
+# <!-- project_table_end -->
+
 ## How do I install these formulae?
 
 `brew install devantler/formulas/<formula>`
