@@ -12,7 +12,7 @@ class Ksail < Formula
     if Hardware::CPU.arm?
       url "https://github.com/devantler/ksail/releases/download/v#{version}/ksail-osx-arm64.tar.gz"
       sha256 "replace_with_osx_arm64_sha256"
-    elseif Hardware::CPU.intel?
+    elsif Hardware::CPU.intel?
       url "https://github.com/devantler/ksail/releases/download/v#{version}/ksail-osx-x64.tar.gz"
       sha256 "replace_with_osx_x64_sha256"
     else
