@@ -3,13 +3,9 @@ class Ksail < Formula
   homepage "https://github.com/devantler/ksail"
   license "MIT"
   version "1.0.11"
-  url download_url
-
-  def self.download_url
-    os = OS.mac? ? "osx" : "linux"
-    arch = Hardware::CPU.arm? ? "arm64" : "x64"
-    "https://github.com/devantler/ksail/releases/download/v#{version}/ksail-v#{version}-#{os}-#{arch}.tar.gz"
-  end
+  os = OS.mac? ? "osx" : "linux"
+  arch = Hardware::CPU.arm? ? "arm64" : "x64"
+  url "https://github.com/devantler/ksail/releases/download/v#{version}/ksail-v#{version}-#{os}-#{arch}.tar.gz"
 
   def install
     bin.install "ksail"
