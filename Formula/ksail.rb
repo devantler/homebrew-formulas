@@ -1,19 +1,14 @@
 class Ksail < Formula
   desc "Cli tool for provisioning gitops enabled k8s clusters in docker"
   homepage "https://github.com/devantler/ksail"
+  license "MIT"
   version "1.0.11"
-  if OS.mac?
-    if Hardware::CPU.arm?
-      url "https://github.com/devantler/ksail/releases/download/v#{version}/ksail-v#{version}-osx-arm64.tar.gz"
-    elsif Hardware::CPU.intel?
-      url "https://github.com/devantler/ksail/releases/download/v#{version}/ksail-v#{version}-osx-x64.tar.gz"
-    end
-  elsif OS.linux?
-    if Hardware::CPU.arm?
-      url "https://github.com/devantler/ksail/releases/download/v#{version}/ksail-v#{version}-linux-arm64.tar.gz"
-    elsif Hardware::CPU.intel?
-      url "https://github.com/devantler/ksail/releases/download/v#{version}/ksail-v#{version}-linux-x64.tar.gz"
-    end
+  url download_url
+
+  def self.download_url
+    os = OS.mac? ? "osx" : "linux"
+    arch = Hardware::CPU.arm? ? "arm64" : "x64"
+    "https://github.com/devantler/ksail/releases/download/v#{version}/ksail-v#{version}-#{os}-#{arch}.tar.gz"
   end
 
   def install
