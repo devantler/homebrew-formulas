@@ -3,7 +3,7 @@ class Ksail < Formula
   homepage "https://github.com/devantler/ksail"
   os = OS.mac? ? "osx" : "linux"
   arch = Hardware::CPU.arm? ? "arm64" : "x64"
-  version "1.0.13"
+  version "1.0.14"
   url "https://github.com/devantler/ksail/releases/download/v#{version}/ksail-v#{version}-#{os}-#{arch}.tar.gz"
   license "MIT"
   def install
