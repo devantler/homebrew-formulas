@@ -14,7 +14,7 @@
   "github-actions": {
     "enabled": false
   },
-  {
+  "homebrew": {
     "commitMessageTopic": "Homebrew Formula {{depName}}",
     "fileMatch": [
       "^Formula/[^/]+[.]rb$"
