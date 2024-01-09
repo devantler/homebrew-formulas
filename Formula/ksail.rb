@@ -5,18 +5,21 @@ class Ksail < Formula
   sha256 "b02114bbffb98f6f74816beddbe2c58f94837b27241faedce3b0ebde33b18f85"
   version "1.0.17"
   license "MIT"
+
+  depends_on "gnupg"
+
   def install
     if OS.mac?
       if Hardware::CPU.arm?
-        bin.install "ksail-v#{version}-osx-arm64" => "ksail"
+        bin.install "ksail-osx-arm64" => "ksail"
       elsif Hardware::CPU.intel?
-        bin.install "ksail-v#{version}-osx-amd64" => "ksail"
+        bin.install "ksail-osx-amd64" => "ksail"
       end
     elsif OS.linux?
       if Hardware::CPU.arm?
-        bin.install "ksail-v#{version}-linux-arm64" => "ksail"
+        bin.install "ksail-linux-arm64" => "ksail"
       elsif Hardware::CPU.intel?
-        bin.install "ksail-v#{version}-linux-amd64" => "ksail"
+        bin.install "ksail-linux-amd64" => "ksail"
       end
     end
   end
