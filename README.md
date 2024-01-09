@@ -1,5 +1,16 @@
 # Devantler Formulas
 
+<details>
+  <summary>Show/Hide Folder Structure</summary>
+
+<!-- readme-tree start -->
+```
+```
+<!-- readme-tree end -->
+
+</details>
+
+
 | Formula | Description | Install |
 | ------- | ----------- | ------- |
 | KSail   | A CLI tool for provisioning GitOps enabled K8s clusters in Docker. | `brew install devantler/formulas/ksail`<br>`brew install ksail` |
