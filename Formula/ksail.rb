@@ -8,13 +8,7 @@ class Ksail < Formula
 
   livecheck do
     url :stable
-    regex(/^example[._-]v?(\d+(?:\.\d+)+)$/i)
-    strategy :github_latest do |json, regex|
-      match = json["tag_name"]&.match(regex)
-      next if match.blank?
-
-      match[1]
-    end
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
   depends_on "gnupg"
