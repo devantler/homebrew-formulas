@@ -6,6 +6,17 @@ class Ksail < Formula
   sha256 "d8f4e006cfdfc8b31128a54015b6113d62652f790bdb5a8ab45b01545403eb6d"
   license "MIT"
 
+  livecheck do
+    url :stable
+    regex(/^example[._-]v?(\d+(?:\.\d+)+)$/i)
+    strategy :github_latest do |json, regex|
+      match = json["tag_name"]&.match(regex)
+      next if match.blank?
+
+      match[1]
+    end
+  end
+
   depends_on "gnupg"
 
   def install
