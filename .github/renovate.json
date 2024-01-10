@@ -13,8 +13,5 @@
   },
   "github-actions": {
     "enabled": false
-  },
-  "homebrew": {
-    "enabled": false
   }
 }
