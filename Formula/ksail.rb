@@ -15,9 +15,9 @@ class Ksail < Formula
   def install
     if OS.mac?
       if Hardware::CPU.arm?
-        bin.install "ksail-osx-arm64" => "ksail"
+        bin.install "ksail-darwin-arm64" => "ksail"
       elsif Hardware::CPU.intel?
-        bin.install "ksail-osx-amd64" => "ksail"
+        bin.install "ksail-darwin-amd64" => "ksail"
       end
     elsif OS.linux?
       if Hardware::CPU.arm?
