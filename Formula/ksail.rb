@@ -10,8 +10,6 @@ class Ksail < Formula
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
-  depends_on "gnupg"
-
   def install
     if OS.mac?
       if Hardware::CPU.arm?
