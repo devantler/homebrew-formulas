@@ -9,6 +9,12 @@
 
 <!-- readme-tree start -->
 ```
+.
+├── .github
+│   └── workflows
+└── Formula
+
+3 directories
 ```
 <!-- readme-tree end -->
 
