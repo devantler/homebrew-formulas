@@ -25,4 +25,8 @@ class Ksail < Formula
       end
     end
   end
+
+  test do
+    system "#{bin}/ksail", "--version"
+  end
 end
