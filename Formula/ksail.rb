@@ -1,8 +1,8 @@
 class Ksail < Formula
   desc "CLI tool for provisioning GitOps enabled K8s clusters in docker"
   homepage "https://github.com/devantler/ksail"
-  url "https://github.com/devantler/ksail/releases/download/v1.4.19/ksail.tar.gz"
-  sha256 "12a3a9a76376bee633d92de334dec7aa36ac34cf9c78e55070a2ee6a21e52514"
+  url "https://github.com/devantler/ksail/releases/download/v1.4.20/ksail.tar.gz"
+  sha256 "626f686193e77b5b7fe36e6b708941e5164df972d75c33097d0615e466c5b649"
   license "MIT"
 
   livecheck do
