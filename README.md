@@ -1,8 +1,8 @@
 # Devantler Formulas
 
-| Formula | Description | Install |
-| ------- | ----------- | ------- |
-| [KSail](https://github.com/devantler/ksail)   | A CLI tool for provisioning GitOps enabled K8s clusters in Docker. | `brew install devantler/formulas/ksail`<br>`brew install ksail` |
+| Formula | Description |
+| ------- | ----------- |
+| [KSail](https://github.com/devantler/ksail)   | A CLI tool for provisioning GitOps enabled K8s clusters in Docker. |
 
 <details>
   <summary>Show/Hide Folder Structure</summary>
